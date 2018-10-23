@@ -1,0 +1,41 @@
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>My Profile</title>
+  <meta name="description" content="My Profile">
+  <meta name="author" content="Kai">
+
+  <link rel="stylesheet" type="text/css" href="profile_dashbord.css">
+
+</head>
+
+<body>
+  <div class="main">
+	
+	<div class="dashbord">
+	    <% profiles.forEach(function(profile){ %>
+            <div class="profile">
+                <img src="<%= profile.image %>" > 
+                <section>
+				<header><%= profile.name %></header>
+				<p><%= profile.desc %></p>
+			</section>
+            </div>
+        <% });%>
+        
+        
+		
+		
+		<div class="profile">
+			<button><a href="/new">ADD</a></button>
+		</div>
+	</div>
+  </div>
+  
+</body>
+</html>
+
